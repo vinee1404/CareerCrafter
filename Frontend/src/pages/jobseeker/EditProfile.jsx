@@ -155,10 +155,14 @@ export default function EditProfile() {
               <div className={styles.resumeExisting}>
                 <span>📄 Resume uploaded</span>
                 <div className={styles.resumeActions}>
-                  <a href={`/api/profile/resume/download/${resumeFileName}`}
-                     target="_blank" rel="noopener noreferrer" className={styles.resumeLink}>
-                    View / Download
-                  </a>
+                  <a 
+  href={`http://localhost:8080/api/profile/resume/download/${resumeFileName}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.resumeLink}
+>
+  View / Download 
+</a>
                   <button type="button" onClick={handleDeleteResume}
                     className={styles.deleteResumeBtn} disabled={deleting}>
                     {deleting ? 'Deleting...' : 'Delete'}

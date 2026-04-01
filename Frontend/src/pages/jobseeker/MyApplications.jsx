@@ -82,9 +82,14 @@ export default function MyApplications() {
             <div className={styles.appCardFooter}>
               <Link to={`/jobs/${app.jobId}`} className={styles.viewJobLink}>View Job Posting →</Link>
               {app.resumeUrl && (
-                <a href={`/api/profile/resume/download/${app.resumeUrl}`} target="_blank" rel="noopener noreferrer" className={styles.viewJobLink}>
-                  Resume Sent ↗
-                </a>
+                <a 
+  href={`http://localhost:8080/api/profile/resume/download/${app.resumeUrl}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.viewJobLink}
+>
+  Resume Sent 
+</a>
               )}
             </div>
           </div>

@@ -77,7 +77,13 @@ export default function ApplyJob() {
             <div className={styles.previewItem}>
               <span>Resume</span>
               <p>{profile?.resumeFileName
-                ? <a href={`/api/profile/resume/download/${profile.resumeFileName}`} target="_blank" rel="noopener noreferrer">View resume ↗</a>
+                ? <a 
+  href={`http://localhost:8080/api/profile/resume/download/${profile.resumeFileName}`} 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  View resume ↗
+</a>
                 : 'Not uploaded'
               }</p>
             </div>
